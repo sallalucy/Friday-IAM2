@@ -1,7 +1,7 @@
 # the goal was to create an Instance, create a role that has s3 read and write (Get and Put) permissions to an existing bucket
 # add permission to the dynamoDB table we created if it exist.
 
-resource "aws_instance" "foo" {
+resource "aws_instance" "lucy-instance" {
   ami           = var.ami  #ami is found in the variable.tf file You must provide an ami from the region you are running this code
   instance_type = var.intance_type #instance_type is found in the variable.tf file
   iam_instance_profile = aws_iam_instance_profile.test_profile.id # This is the instance profile we created below 
